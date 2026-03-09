@@ -1,0 +1,93 @@
+.mds-accordion.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mds-spacing-md);
+}
+
+.mds-accordion .mds-accordion__item.accordion-item {
+  background-color: var(--mds-bg-surface-subtle);
+  border: var(--mds-stroke-weight-md) solid var(--mds-border-translucent);
+  border-radius: var(--mds-border-radius-lg);
+  overflow: hidden;
+}
+
+.mds-accordion .mds-accordion__item .accordion-header {
+  margin: 0;
+}
+
+.mds-accordion .mds-accordion__item .accordion-button {
+  align-items: center;
+  background-color: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  color: inherit;
+  display: flex;
+  gap: var(--mds-spacing-xs);
+  padding: var(--mds-spacing-md);
+}
+
+.mds-accordion .mds-accordion__item .accordion-button::after {
+  display: none;
+}
+
+.mds-accordion .mds-accordion__heading {
+  color: var(--mds-text-default);
+  flex: 1;
+  font-family: var(--mds-font-family-base);
+  font-size: var(--mds-font-size-headings-4);
+  font-weight: var(--mds-font-weight-normal-medium);
+  letter-spacing: var(--mds-letter-spacing-default);
+  line-height: var(--mds-line-height-headings-4);
+  margin: 0;
+  text-align: left;
+}
+
+.mds-accordion .mds-accordion__icon {
+  color: var(--mds-text-default);
+  flex-shrink: 0;
+  font-size: var(--mds-icons-lg);
+  transition: transform 0.2s ease;
+}
+
+.mds-accordion .mds-accordion__item .accordion-button:not(.collapsed) {
+  background-color: transparent;
+  box-shadow: none;
+  color: inherit;
+}
+
+.mds-accordion
+  .mds-accordion__item
+  .accordion-button:not(.collapsed)
+  .mds-accordion__icon {
+  transform: rotate(90deg);
+}
+
+.mds-accordion .mds-accordion__item:hover,
+.mds-accordion .mds-accordion__item:focus-within {
+  border-color: var(--mds-border-interactive-primary-default);
+}
+
+.mds-accordion .mds-accordion__item .accordion-button:focus {
+  box-shadow: none;
+}
+
+.mds-accordion .mds-accordion__item .accordion-body,
+.mds-accordion .mds-accordion__body {
+  color: var(--mds-text-default);
+  font-family: var(--mds-font-family-base);
+  font-size: var(--mds-font-size-paragraph-default);
+  font-weight: var(--mds-font-weight-normal-regular);
+  letter-spacing: var(--mds-letter-spacing-default);
+  line-height: var(--mds-line-height-paragraph-default);
+  padding: 0 var(--mds-spacing-md) var(--mds-spacing-md);
+}
+
+.mds-accordion.mds-accordion--info .mds-accordion__item {
+  background-color: var(--mds-bg-feedback-primary-subtle);
+}
+
+.mds-accordion.mds-accordion--info .mds-accordion__heading,
+.mds-accordion.mds-accordion--info .mds-accordion__icon,
+.mds-accordion.mds-accordion--info .mds-accordion__item .accordion-body {
+  color: var(--mds-text-feedback-primary);
+}
